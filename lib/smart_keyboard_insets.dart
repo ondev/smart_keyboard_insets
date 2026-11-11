@@ -1,6 +1,6 @@
 /// Smart Keyboard Insets - A Flutter plugin for accurate keyboard height
-/// and safe area detection, native on Android and iOS, with a fallback based
-/// on Flutter's view metrics on web, macOS, Windows and Linux.
+/// and safe area detection, native on Android, iOS and OpenHarmony, with a
+/// fallback based on Flutter's view metrics on web, macOS, Windows and Linux.
 library smart_keyboard_insets;
 
 import 'dart:async';
@@ -62,7 +62,7 @@ class SmartKeyboardInsets {
   /// Private constructor for singleton pattern.
   SmartKeyboardInsets._();
 
-  /// Cached broadcast stream of native keyboard events (Android, iOS).
+  /// Cached broadcast stream of native keyboard events (Android, iOS, OpenHarmony).
   Stream<KeyboardMetrics>? _nativeStream;
 
   /// Cached broadcast stream from the view-metrics fallback (other platforms).
@@ -74,12 +74,13 @@ class SmartKeyboardInsets {
   StreamSubscription<KeyboardMetrics>? _notifierSubscription;
 
   /// Lets tests use the native method and event channels (normally only
-  /// used on Android and iOS) on any platform, e.g. with mocked channels.
+  /// used on Android, iOS and OpenHarmony) on any platform, e.g. with mocked
+  /// channels.
   @visibleForTesting
   static bool debugAutoSubscribeOnAnyPlatform = false;
 
-  /// Whether to use the native Android/iOS implementation rather than the
-  /// view-metrics fallback used on web, macOS, Windows and Linux.
+  /// Whether to use the native Android/iOS/OpenHarmony implementation rather
+  /// than the view-metrics fallback used on web, macOS, Windows and Linux.
   static bool get _useNativeChannels =>
       debugAutoSubscribeOnAnyPlatform || isNativePlatform;
 

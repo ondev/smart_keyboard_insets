@@ -17,8 +17,8 @@ screenshots:
     path: doc/demo.gif
 
 environment:
-  sdk: ^3.12.0
-  flutter: '>=3.44.0'
+  sdk: ^3.8.0
+  flutter: '>=3.40.0'
 
 dependencies:
   flutter:
@@ -38,6 +38,9 @@ flutter:
         package: com.rishi115.smart_keyboard_insets
         pluginClass: SmartKeyboardInsetsPlugin
       ios:
+        pluginClass: SmartKeyboardInsetsPlugin
+      ohos:
+        package: com.rishi115.smart_keyboard_insets
         pluginClass: SmartKeyboardInsetsPlugin
       web:
         pluginClass: SmartKeyboardInsetsWebPlugin

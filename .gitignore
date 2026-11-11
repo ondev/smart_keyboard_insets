@@ -77,3 +77,12 @@ pubspec.lock
 # Swift Package Manager
 .build/
 .swiftpm/
+
+# OpenHarmony build artifacts
+**/ohos/oh_modules/
+**/ohos/oh-package-lock.json5
+**/ohos/BuildProfile.ets
+**/ohos/local.properties
+**/ohos/.hvigor/
+**/ohos/.test/
+**/ohos/**/build/

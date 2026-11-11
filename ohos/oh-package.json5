@@ -1,0 +1,11 @@
+{
+  "name": "smart_keyboard_insets",
+  "version": "1.0.0",
+  "description": "OpenHarmony implementation of smart_keyboard_insets.",
+  "main": "index.ets",
+  "author": "rishi115",
+  "license": "MIT",
+  "dependencies": {
+    "@ohos/flutter_ohos": "file:libs/flutter.har"
+  }
+}

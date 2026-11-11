@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "smart_keyboard_insets",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}
